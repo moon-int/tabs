@@ -1,0 +1,31 @@
+{
+  "$comment": "Everything tabs needs in Havoc: the app for sign in with havoc. The project (jam) is a proposal - change id/name before the first setup. From any machine with hc (not the NUC; e.g. the dev pc with Havoc/cmd/hc.cmd): hc login https://havoc.geyser.at, then hc setup havoc.app.json --url https://jam.geyser.at/tabs --print-env, and copy the printed lines into the .env on the NUC. SESSION_SECRET and TABS_CONTROL_KEY may stay empty there - the server makes them itself.",
+  "project": {
+    "id": "jam",
+    "name": "Jam"
+  },
+  "app": {
+    "slug": "tabs",
+    "name": "Tabs",
+    "urls": [
+      "https://jam.geyser.at/tabs",
+      "http://localhost:3000"
+    ],
+    "callback": "/api/auth/callback"
+  },
+  "api_key": {
+    "name": "tabs-server",
+    "role": "viewer",
+    "scopes": [
+      "content:read"
+    ]
+  },
+  "env_file": ".env",
+  "generated_secrets": [
+    "SESSION_SECRET",
+    "TABS_CONTROL_KEY"
+  ],
+  "env": {
+    "TABS_ROOM_PREFIX": "lg"
+  }
+}

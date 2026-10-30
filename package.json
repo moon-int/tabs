@@ -1,0 +1,45 @@
+{
+  "name": "tabs",
+  "version": "2.0.0",
+  "description": "mo-tion interactive: tabs — play guitar pro & musicxml tabs together, in sync, built with next.js and alphaTab",
+  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "dev": "node server/index.js",
+    "postinstall": "node scripts/vendor-alphatab.js",
+    "prebuild": "node scripts/vendor-alphatab.js && node scripts/build-examples.js",
+    "build": "next build",
+    "start": "node server/index.js --prod",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/",
+    "nuc": "node deploy/jam.mjs --local"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.17"
+  },
+  "dependencies": {
+    "@coderline/alphatab": "^1.8.4",
+    "compression": "^1.8.2",
+    "express": "^5.2.1",
+    "next": "^14.2.32",
+    "qrcode": "^1.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "ws": "^8.21.3"
+  },
+  "devDependencies": {
+    "@types/node": "24.3.1",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "typescript": "^5.9.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moon-int/tabs.git"
+  },
+  "homepage": "https://tabs.mo-tion.at"
+}

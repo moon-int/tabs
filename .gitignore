@@ -1,0 +1,34 @@
+# Node / Next.js
+node_modules/
+.next/
+.out/
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+# VS Code
+.vscode/
+# OS
+Thumbs.db
+# Build artifacts
+*.log
+*.tsbuildinfo
+.next-*/
+# alphaTab assets, copied from node_modules by scripts/vendor-alphatab.js
+public/vendor/
+# example shows for solo sessions, built from example/ by scripts/build-examples.js
+public/examples/
+
+# server settings and the library (tabs.geyser.at on the NUC)
+.env
+data/
+
+# the NUC rebuilt here (npm run nuc)
+data-nuc/
+deploy/nuc-local.env
+deploy/nuc.env
